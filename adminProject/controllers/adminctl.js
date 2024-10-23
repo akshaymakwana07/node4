@@ -117,6 +117,9 @@ module.exports.updatedata=async(req,res)=>{
 module.exports.changepass=(req,res)=>{
     res.render("changepass")
 }
+
+
+
 module.exports.newpass=async(req,res)=>{
     let admindata=await UserModel.findById(req.user.id);
 

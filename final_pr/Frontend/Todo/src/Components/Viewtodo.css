@@ -1,0 +1,36 @@
+.container {
+    text-align: center;
+    margin-left: 50px;
+  }
+  
+  .table {
+    color: white;
+    width: 650px;
+    margin: 20px auto; /* Center the table */
+    border-collapse: collapse; /* Merge borders */
+  }
+  
+  .table thead {
+    background-color: black;
+  }
+  .table tbody{
+    background-color: gray;
+  }
+  
+ 
+  
+  .table th {
+    font-weight: bold; /* Make header text bold */
+  }
+  
+  
+  
+  .edit-icon, .delete-icon {
+    cursor: pointer; /* Change cursor to pointer for icons */
+    transition: transform 0.3s; /* Smooth transition for scaling */
+  }
+  
+  .edit-icon:hover, .delete-icon:hover {
+    transform: scale(1.1); /* Scale up icon on hover */
+  }
+  
