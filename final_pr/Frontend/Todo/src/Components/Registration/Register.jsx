@@ -15,7 +15,7 @@ function Register() {
   const handleregister = async (e) => {
     e.preventDefault();
 
-    await axios.post("http://localhost:2025/admin/registration", { username, email, password })
+    await axios.post("http://localhost:2025/admin/registration", { username, email, password },{credentials: 'include'})
       .then((res) => {
         console.log(res);
         setRegister([...register, res.data]);

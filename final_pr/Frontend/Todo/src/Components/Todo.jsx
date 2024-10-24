@@ -17,7 +17,7 @@ export default function Todo() {
   const handlesubmit=async(e)=>{
     e.preventDefault();
 
-    await axios.post('http://localhost:2025/admin/insertadmin',{name,email,password,phoneno})
+    await axios.post('http://localhost:2025/admin/insertadmin',{name,email,password,phoneno},{credentials: 'include'})
     .then((res)=>{
        console.log(res)
        setAdmin([...admin,res.data])

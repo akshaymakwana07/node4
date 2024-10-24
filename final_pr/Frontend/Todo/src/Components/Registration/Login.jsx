@@ -18,7 +18,7 @@ const handlelogin=async(e)=>{
  
   e.preventDefault();
 
-  await axios.post("http://localhost:2025/admin/loginadmin",{email,password})
+  await axios.post("http://localhost:2025/admin/loginadmin",{email,password},{credentials: 'include'})
   .then((res)=>{
       console.log(res)
       setLogin([...login,res.data]);

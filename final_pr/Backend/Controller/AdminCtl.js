@@ -47,6 +47,37 @@ module.exports.loginadmin=async(req,res)=>{
   }
 }
 
+
+
+module.exports.editdata=async(req,res)=>{
+  try {
+    const editdata = await admin.findById(req.query.id);
+    editdata ? res.status(202).json({msg : "Admin get Successfully...",editdata}) :
+    res.status(404).json({msg : "Admin Not edit Try again...!!!"})
+  } catch (err) {
+    res.status(400).json({success: false, message: 'error found while login user', err})
+
+  }
+}
+
+module.exports.updatedata=async(req,res)=>{
+  try{
+
+    const updatee=await admin.findByIdAndUpdate(req.query.id,req.body);
+    updatee ? res.status(202).json({msg : "Admin edit Successfully...",updatee}) :
+    res.status(404).json({msg : "Admin Not update Try again...!!!"})
+
+  }catch(err){
+    res.status(404).json(err)
+  }
+}
+
+
+
+
+
+
+
 module.exports.forgetpassAdmin=async(req,res)=>{
 
   console.log(req.body)
